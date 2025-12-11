@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>EcoFixer 前端介面</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      🚀 <span>EcoFixer 前端介面</span>
+    </div>
+    <div class="actions">
+      <button id="btn-info">取得後端資訊</button>
+      <button id="btn-load-orders">取得所有報修單</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 新增報修單 -->
+    <section class="card">
+      <h2>新增報修單</h2>
+      <div class="form-row">
+        <input
+          id="new-title"
+          type="text"
+          placeholder="例如：浴室水龍頭漏水"
+        />
+        <button id="btn-create">建立報修</button>
+      </div>
+      <p id="create-msg" class="msg"></p>
+    </section>
+
+    <!-- 報修單列表 -->
+    <section class="card">
+      <h2>報修單列表</h2>
+
+      <div class="filters">
+        <button class="filter-btn" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="pending">待處理</button>
+        <button class="filter-btn" data-filter="assigned">已派單</button>
+        <button class="filter-btn" data-filter="completed">已完成</button>
+        <button class="filter-btn" data-filter="cancelled">已取消</button>
+      </div>
+
+      <p id="list-msg" class="msg"></p>
+
+      <table class="orders-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>內容</th>
+            <th>狀態</th>
+            <th>工班</th>
+            <th>建立時間</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="orders-body">
+          <!-- JS 動態插入 -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Debug 區 -->
+    <section class="card">
+      <h2>原始 JSON Debug</h2>
+      <pre id="json-output" class="debug"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
