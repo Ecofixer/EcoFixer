@@ -56,3 +56,4 @@ function renderOrders(list) {
     ordersBody.appendChild(tr);
   });
 }
+<script src="./js/landlord.js"></script>

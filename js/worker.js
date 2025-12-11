@@ -134,3 +134,5 @@ window.addEventListener("DOMContentLoaded", () => {
   if (assignedBtn) assignedBtn.classList.add("active");
   loadOrders("assigned");
 });
+
+<script src="./js/worker.js"></script>

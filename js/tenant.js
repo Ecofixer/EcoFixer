@@ -133,3 +133,5 @@ window.addEventListener("DOMContentLoaded", () => {
   if (first) first.classList.add("active");
   loadOrders("all");
 });
+
+<script src="./js/tenant.js"></script>
